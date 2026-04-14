@@ -40,7 +40,6 @@ size_t USART_WriteData(const void *data, size_t dataSize){
 	return dataSize;
 }
 
-
 size_t USART_WriteString(const char *string){
 	/* TODO */
 	if (string == NULL) {
