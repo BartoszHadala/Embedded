@@ -1,0 +1,73 @@
+/* Includes ------------------------------------------------------------------*/
+#include "usart.h"
+#include "main.h"
+#include "ring_buffer.h"
+
+#define USART_PORT USART2
+#define USART_PORT_IRQn USART2_IRQn
+
+// UART transmit buffer descriptor
+static RingBuffer USART_RingBuffer_Tx;
+// UART transmit buffer memory pool
+static char RingBufferData_Tx[1024];
+
+// UART receive buffer descriptor
+static RingBuffer USART_RingBuffer_Rx;
+// UART receive buffer memory pool
+static char RingBufferData_Rx[1024];
+
+
+bool USART_PutChar(char c){
+	/* TODO */
+	if (RingBuffer_PutChar(&RingBufferData_Tx, &c)) {
+		LL_USART_EnableIT_TXE(USART1);
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+size_t USART_WriteData(const void *data, size_t dataSize){
+	/* TODO */
+	(void)data;
+	(void)dataSize;
+	return 0;
+}
+
+
+size_t USART_WriteString(const char *string){
+	/* TODO */
+	(void)string;
+	return 0;
+}
+
+
+bool USART_GetChar(char *c){
+	/* TODO */
+	(void)c;
+	return false;
+}
+
+
+size_t USART_ReadData(void *data, size_t maxSize){
+	/* TODO */
+	(void)data;
+	(void)maxSize;
+	return 0;
+}
+
+
+// USART2 Interrupt Service Routine (ISR)
+void USART2_IRQHandler(void){
+	/* TODO */
+}
+
+
+/**
+ * This function initialize ring buffers, USART device and enable receive interrupt.
+ */
+void USART_Init(void){
+	/* TODO */
+}
+

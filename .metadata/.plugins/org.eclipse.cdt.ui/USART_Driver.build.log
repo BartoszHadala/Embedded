@@ -1,0 +1,10 @@
+19:07:29 **** Incremental Build of configuration Debug for project USART_Driver ****
+make -j8 all 
+arm-none-eabi-size  USART_Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8276	     12	   3660	  11948	   2eac	USART_Driver.elf
+Finished building: default.size.stdout
+ 
+
+19:07:29 Build Finished. 0 errors, 0 warnings. (took 312ms)
+
