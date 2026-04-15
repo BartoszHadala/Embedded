@@ -1,0 +1,11 @@
+Architekturasterowania zdarzeniami (EDA) w systemach wbudowanych to sposób projektowania oprogramowania,
+w którym poszcególne komponenty systemu komunikują się ze sobą i współpracują wykorzystując zdarzenia, zamiast wzajemnych wywołań.
+
+Co może być zdarzeniem?
+    * wciśniecię przycisku
+    * odebranie pakietu w interfejsie komunikacyjnym
+    * zakończenie procesu np. filtrowania danych
+    * upłynięcie czasu
+
+Obsługa zdarzenia:
+Z każdym zdarzeniem powinna być związana pewna funkcja obsługi tego zdarzenia - callback dodatkowo z kontekstem.
